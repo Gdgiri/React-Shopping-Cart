@@ -6,7 +6,7 @@ const Navbar = ({ value }) => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container px-4 px-lg-5">
           <a className="navbar-brand text-dark" href="#!">
-            Start Bootstrap
+            React Shopping Cart
           </a>
           <button
             className="navbar-toggler"
