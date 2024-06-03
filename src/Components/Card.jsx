@@ -26,7 +26,7 @@ const Card = ({ setValue, value, arr, setArr }) => {
                   <img
                     src={ele.image}
                     alt={ele.productName}
-                    width={400}
+                    width={300}
                     className="mx-auto"
                   />
                   </div>
