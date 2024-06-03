@@ -23,18 +23,21 @@ const Card = ({ setValue, value, arr, setArr }) => {
               <div className="card">
                 <div className="card-body">
                   <div className="d-flex justify-content-center">
-                  <img
-                    src={ele.image}
-                    alt={ele.productName}
-                    width={200}
-                    className="mx-auto"
-                  />
+                    <img
+                      src={ele.image}
+                      alt={ele.productName}
+                      width={200}
+                      className="mx-auto"
+                    />
                   </div>
                   <div className="card-head text-center">
                     <h3>{ele.productName}</h3>
                   </div>
                   <div className="card-text text-center">
                     <h3>{ele.price}</h3>
+                  </div>
+                  <div className="card-text text-center">
+                    <h3>{ele.star}</h3>
                   </div>
                 </div>
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-center">
