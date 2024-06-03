@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className="py-5 bg-primary">
         <div className="container">
           <p className="m-0 text-center text-white">
-            Copyright © Your Website 2024
+            Copyright © React Shopping Cart 2024
           </p>
         </div>
       </footer>
