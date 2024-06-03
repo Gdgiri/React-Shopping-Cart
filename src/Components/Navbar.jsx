@@ -69,7 +69,10 @@ const Navbar = ({ value }) => {
               </li>
             </ul>
             <form className="d-flex">
-              <button className="btn btn-outline-primary text-dark" type="submit">
+              <button
+                className="btn btn-outline-primary text-dark"
+                type="button"
+              >
                 <i className="bi-cart-fill me-1 "></i>
                 Cart
                 <span className="badge bg-dark text-white ms-1 m-1 rounded-pill">
