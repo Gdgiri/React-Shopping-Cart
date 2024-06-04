@@ -2,3 +2,13 @@
   display: flex;
   justify-content: center;
 }
+
+.sale-box{
+  height: 40px;
+  width: 50px;
+  text-align: center;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}

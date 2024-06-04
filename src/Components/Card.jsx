@@ -17,36 +17,57 @@ const Card = ({ setValue, value, arr, setArr }) => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-4 g-4">
           {arr.map((ele, index) => (
             <div className="col" key={index}>
               <div className="card">
-                <div className="card-body">
-                  <div className="d-flex justify-content-center">
+                <div className="card-body position-relative">
+                  <div className="d-flex justify-content-center position-relative">
                     <img
                       src={ele.image}
                       alt={ele.productName}
                       width={200}
                       className="mx-auto"
                     />
+                    {ele.star && (
+                      <div className="sale-box bg-dark text-white p-2">
+                        sale
+                      </div>
+                    )}
                   </div>
                   <div className="card-head text-center">
                     <h3>{ele.productName}</h3>
                   </div>
-                  <div className="card-text text-center">
-                    <h3>{ele.price}</h3>
-                  </div>
-                  <div className="card-text text-center">
-                    <h3>{ele.star}</h3>
+                  {ele.war && (
+                    <div className="text-warning text-center">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                  )}
+                  <div className="text-center">
+                    <span className="strikethrough">{ele.originalPrice}</span>
+                    <span>{ele.discountedPrice}</span>
                   </div>
                 </div>
+
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-center">
                   <button
-                    className="btn btn-outline-primary mt-auto "
-                    onClick={() => handleClick(index)}
+                    className="btn btn-outline-primary mt-auto"
+                    onClick={() => {
+                      if (!ele.viewoption) {
+                        handleClick(index);
+                      }
+                    }}
                     href="#"
                   >
-                    {ele.inCart ? "Remove from Cart" : "Add to Cart"}
+                    {ele.viewoption
+                      ? "View Option"
+                      : ele.inCart
+                      ? "Remove from Cart"
+                      : "Add to Cart"}
                   </button>
                 </div>
               </div>
