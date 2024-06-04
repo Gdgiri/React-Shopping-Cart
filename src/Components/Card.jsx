@@ -56,11 +56,15 @@ const Card = ({ setValue, value, arr, setArr }) => {
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-center">
                   <button
                     className="btn btn-outline-primary mt-auto"
-                    onClick={() => handleClick(index)}
+                    onClick={() => {
+                      if (!ele.viewoption) {
+                        handleClick(index);
+                      }
+                    }}
                     href="#"
                   >
                     {ele.viewoption
-                      ? "viewoption"
+                      ? "View Option"
                       : ele.inCart
                       ? "Remove from Cart"
                       : "Add to Cart"}
